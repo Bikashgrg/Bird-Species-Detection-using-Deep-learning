@@ -46,12 +46,24 @@ Some output images of predicted birds:
 
 ![Predict_2](https://user-images.githubusercontent.com/29011734/163980969-482fab1c-5f75-4f1f-93cc-d8a05636d03c.png)
 
-![Predict_3](https://user-images.githubusercontent.com/29011734/163980981-97684cc4-60d0-4a9a-ab7f-9f5641b071f6.png)
+## For inferencing model with external images of bird species
 
+Below are some of the outputs generated using Faster R-CNN when external data is being used:
 
+![Screenshot (377)](https://user-images.githubusercontent.com/29011734/163982416-5301b05f-09dc-4030-9be5-07c81021eedb.png)
 
+![Screenshot (378)](https://user-images.githubusercontent.com/29011734/163982433-a56d76c6-4087-458c-8d56-6c11192cdb21.png)
 
+### Note:
+All of the above information, along with screenshots of the output, can be found in the corresponding jupyter notebooks above, within their respective folders. 
 
+## Conclusion
 
+Finally, I'd like to highlight that the *Faster R-CNN* model outperformed the *SSD MobileNet* model in every parameter. Initially, I used the same config file parameter values for both models with 5000 training steps where *MobileNet* performed not good because it was having hard time recognised the birds. And even if it recongnises then either accuracy was low or wrongly classified the bird species in the images. This ensures that even with fewer steps, *Faster R-CNN* was able to function quite good. Finally, in terms of accuracy:
 
+**SSD MobileNet** -> With 20 thousand steps it gave the accuracy of around 72%.
+
+**Faster R-CNN** -> With 10 thousand steps it gave the accuracy of around 90%.
+
+After confirming this, I attempted to make both models as good as possible by modifying the config file values. You can see all the perimeter modifications information for both *Faster R-CNN* and *SSD MobileNet* models in their respective *Inference* jupyter file.
 
